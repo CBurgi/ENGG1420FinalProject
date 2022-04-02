@@ -1,5 +1,6 @@
 frames: 1000
 speed: 10fps
+3
 
 Circle
 r: 10
@@ -12,6 +13,11 @@ start: 10
 effect
 Hide
 start: 120
+
+Test
+fdsa
+fdsa
+fdsa
 
 Rect
 length: 100
