@@ -8,5 +8,11 @@
  * @author cburg
  */
 public class AnimationPlayer {
+    public void loadAnimationFromFile(String fileName){
+        
+    }
     
+    public void run(){
+        
+    }
 }
