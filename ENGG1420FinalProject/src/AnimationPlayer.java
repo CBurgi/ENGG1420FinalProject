@@ -132,6 +132,7 @@ public class AnimationPlayer {
                                 //adds a Jump effect of Shape n, start startFrame, and the three (r, g, b) values -Cole
                                 effectsList.add(new Effect/*Hide*/(n, startFrame, color[0], color[1], color[2]));
                             }
+                            
                         }
                         
                         //sets x, or startX for Line -Cole
@@ -163,6 +164,9 @@ public class AnimationPlayer {
                                 
                         
                     }
+                
+                //sets the completed ArrayList of effects to an array to be properly uses -Cole
+                effects = effectsList.toArray(new Effect[0]);
                 
             }  
         } catch (IOException e) {
