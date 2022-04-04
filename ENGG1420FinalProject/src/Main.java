@@ -17,6 +17,7 @@ public class Main {
         
         AnimationPlayer player = new AnimationPlayer();
         player.loadAnimationFromFile("animation1.txt");
+        player.run();
     }
     
 }

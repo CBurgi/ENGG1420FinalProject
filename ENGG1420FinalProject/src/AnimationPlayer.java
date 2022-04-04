@@ -182,5 +182,6 @@ public class AnimationPlayer {
     
     public void run(){
         
+        MyFrame myFrame = new MyFrame(); 
     }
 }
