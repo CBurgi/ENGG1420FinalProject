@@ -61,23 +61,23 @@ public class AnimationPlayer {
                 //Sets the type of shape -Cole
                 String shapeType = input.readLine().strip();
                 if(shapeType.contains(shapeTypes[0]/*Which is Circle*/)){
-                    n = new Shape/*Circle*/();
+                    n = new Circle();
                     System.out.println("c");
                     
                 }
                 else if(shapeType.contains(shapeTypes[1]/*Which is Rect*/)){
-                    n = new Shape/*Rect*/();
+                    n = new Rect();
                     System.out.println("r");
                     
                 }
                 else if(shapeType.contains(shapeTypes[2]/*Which is Line*/)){
-                    n = new Shape/*Line*/();
+                    n = new Line();
                     System.out.println("l");
                     
                 }else{
                     
                     //if the shape isn't an accepted shape, we will skip to the next shape -Cole
-                    n = new Shape/*Null*/();
+                    n = new Null();
                     System.out.println("x");
                     while(true){
                         String s = input.readLine();
@@ -97,13 +97,13 @@ public class AnimationPlayer {
                                 int startFrame = Integer.parseInt(input.readLine().strip().replaceAll("[^0-9]", ""));
                                 
                                 //adds a Hide effect of Shape n and start startFrame -Cole
-                                effectsList.add(new Effect/*Hide*/(n, startFrame));
+                                effectsList.add(new Hide(n, startFrame));
                             }
                             if(eType.contains(effectTypes[1]/*Which is Show*/)){
                                 int startFrame = Integer.parseInt(input.readLine().strip().replaceAll("[^0-9]", ""));
                                 
                                 //adds a Show effect of Shape n and start startFrame -Cole
-                                effectsList.add(new Effect/*Show*/(n, startFrame));
+                                effectsList.add(new Show(n, startFrame));
                             }
                             if(eType.contains(effectTypes[2]/*Which is Jump*/)){
                                 int startFrame = 0;
@@ -117,7 +117,7 @@ public class AnimationPlayer {
                                 }
                                 
                                 //adds a Jump effect of Shape n, start startFrame, x jumpX, and y jumpY -Cole
-                                effectsList.add(new Effect/*Jump*/(n, startFrame, jumpX, jumpY));
+                                effectsList.add(new Jump(n, startFrame, jumpX, jumpY));
                                 
                             }
                             if(eType.contains(effectTypes[3]/*Which is ChangeColor*/)){
@@ -130,7 +130,7 @@ public class AnimationPlayer {
                                 }
                                 
                                 //adds a Jump effect of Shape n, start startFrame, and the three (r, g, b) values -Cole
-                                effectsList.add(new Effect/*Hide*/(n, startFrame, color[0], color[1], color[2]));
+                                effectsList.add(new ChangeColor(n, startFrame, color));
                             }
                             
                         }
@@ -143,13 +143,13 @@ public class AnimationPlayer {
                         else if(s.contains("color:")){
                             //splits the line ex:"color: 255, 0, 0" into {"255", "0", "0"} to use in setColor -Cole
                             String[] c = s.strip().replaceAll("[^0-9,]", "").split(",");
-                            n.setColor(Integer.parseInt(c[0]), Integer.parseInt(c[1]), Integer.parseInt(c[2]));
+                            n.setColor(c);
                         }
                         //sets border colour in (r,g,b) values for circle or rect -Cole
                         else if(s.contains("borderColor:")){
                             //splits the line ex:"borderColor: 255, 0, 0" into {"255", "0", "0"} to use in setColor -Cole
                             String[] c = s.strip().replaceAll("[^0-9,]", "").split(",");
-                            n.setBorderColor(Integer.parseInt(c[0]), Integer.parseInt(c[1]), Integer.parseInt(c[2]));
+                            n.setBorderColor(c);
                         }
                         //sets border thickness -Cole
                         else if(s.contains("border:"))n.setBorder(Integer.parseInt(s.strip().replaceAll("[^0-9]", "")));
