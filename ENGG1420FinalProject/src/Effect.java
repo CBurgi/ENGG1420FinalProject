@@ -7,6 +7,20 @@
  *
  * @author cburg
  */
-public class Effect {
+public abstract class Effect {
+    public Shape n;
+    private int startFrame;
     
+    public void setShape(Shape n){
+        this.n = n;
+    }
+    public void setStartFrame(int f){
+        if(f!=0) startFrame = Math.abs(f);
+        else startFrame = 1;
+    }
+    public int getStartFrame(){
+        return startFrame;
+    }
+    
+    public abstract void run();
 }
