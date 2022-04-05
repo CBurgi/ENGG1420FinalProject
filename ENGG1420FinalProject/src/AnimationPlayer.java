@@ -8,8 +8,9 @@ import java.util.ArrayList;
  */
 
 /**
- *
- * @author cburg
+ * The animation player
+ * 
+ * @author Cole Burgi
  */
 public class AnimationPlayer {
     
@@ -24,7 +25,17 @@ public class AnimationPlayer {
     ArrayList<Effect> effectsList = new ArrayList<Effect>();
     Effect[] effects = null;
     
-    
+    /**
+     * Loads the file and makes Shape objects based on the file, as well
+     * as Effect objects that are attached to a specific shape.
+     * @see 'shapes' and 'effects' array
+     * 
+     * @see Shape.java
+     * @see Effect.java
+     * 
+     * @param fileName 
+     * @author Cole Burgi
+     */
     public void loadAnimationFromFile(String fileName){
         
         //the "test\\" part is just there because I am putting test file in the test directory -Cole
@@ -180,6 +191,12 @@ public class AnimationPlayer {
         }
     }
     
+    /**
+     * Creates a frame, that Arron Chin wrote
+     * @see MyFrame
+     * 
+     * @author Cole Burgi
+     */
     public void run(){
         
         MyFrame myFrame = new MyFrame(); 

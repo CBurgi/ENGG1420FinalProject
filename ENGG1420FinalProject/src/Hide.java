@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The effect that makes the shape no longer visible
+ * @see Effect.java
+ * 
+ * @author Cole Burgi
  */
 public class Hide extends Effect{
      public Hide(Shape n, int f){
@@ -16,6 +18,6 @@ public class Hide extends Effect{
      
      @Override
      public void run(){
-         n.setVisable(false);
+         n.setVisible(false);
      }
 }

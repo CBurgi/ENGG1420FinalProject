@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The effect that changes the color of the shape
+ * @see Effect.java
+ * 
+ * @author Cole Burgi
  */
 public class ChangeColor extends Effect{
     private String[] color = {"0","0","0"};

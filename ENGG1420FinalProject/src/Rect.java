@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The class for rectangles
+ * @see Shape.java
+ * 
+ * @author Cole Burgi
  */
 public class Rect extends Shape {
     private int length, width;

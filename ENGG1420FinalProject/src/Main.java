@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * Loads the animation player and starts the screen.
+ * @see AnimationPlayer.java
+ * 
+ * @author Cole Burgi
  */
 public class Main {
 
