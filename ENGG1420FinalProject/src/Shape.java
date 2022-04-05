@@ -4,18 +4,24 @@
  */
 
 /**
- *
- * @author cburg
+ * The abstract class that is the superclass for all shapes
+ * @see Circle.java
+ * @see Rect.java
+ * @see Line.java
+ * @see Null.java
+ * 
+ * @author Cole Burgi
  */
 public abstract class Shape {
     
-    private boolean visable = false;
-    private int x, y, border;
+    //variables that all shapes will have
+    private boolean visible = false;
+    private int x=0, y=0, border=1;
     private int[] color = {0, 0, 0};
     private int[] borderColor = {0, 0, 0};
     
-    public void setVisable(boolean v){
-        this.visable = v;
+    public void setVisible(boolean v){
+        this.visible = v;
     }
     public void setX(int x){
         this.x = x;
@@ -23,6 +29,13 @@ public abstract class Shape {
     public void setY(int y){
         this.y = y;
     }
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
+    }
+    
     public void setBorder(int b){
         this.border = b;
     }
@@ -37,6 +50,7 @@ public abstract class Shape {
         this.borderColor[2] = Integer.parseInt(c[2]);
     }
     
+    //variables that only one/some shapes will have
     public abstract void setR(int r);
     public abstract void setLength(int l);
     public abstract void setWidth(int w);

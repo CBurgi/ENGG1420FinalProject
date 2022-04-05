@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The class for the case where a shape is called for that is not written
+ * @see Shape.java
+ * 
+ * @author Cole Burgi
  */
 public class Null extends Shape {
     @Override

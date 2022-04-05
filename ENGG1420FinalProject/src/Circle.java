@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The class for circles
+ * @see Shape.java
+ * 
+ * @author Cole Burgi
  */
 public class Circle extends Shape {
     private int r;

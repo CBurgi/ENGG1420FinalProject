@@ -4,8 +4,16 @@
  */
 
 /**
- *
- * @author cburg
+ * The abstract class that is the superclass for all effects
+ * @see Hide.java
+ * @see Show.java
+ * @see Jump.java
+ * @see ChangeColor.java
+ * 
+ * Attached to a specific shape that the effect will affect
+ * @see Shape.java
+ * 
+ * @author Cole Burgi
  */
 public abstract class Effect {
     public Shape n;

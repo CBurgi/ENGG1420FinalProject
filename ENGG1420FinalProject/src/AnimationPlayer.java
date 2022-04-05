@@ -8,8 +8,9 @@ import java.util.ArrayList;
  */
 
 /**
- *
- * @author cburg
+ * The animation player
+ * 
+ * @author Cole Burgi
  */
 public class AnimationPlayer {
     
@@ -19,12 +20,23 @@ public class AnimationPlayer {
     private int fps = 0;
     private int elements = 0;
     
+    ArrayList<Shape> shapesList = new ArrayList<Shape>();
     Shape[] shapes = null;
     
     ArrayList<Effect> effectsList = new ArrayList<Effect>();
     Effect[] effects = null;
     
-    
+    /**
+     * Loads the file and makes Shape objects based on the file, as well
+     * as Effect objects that are attached to a specific shape.
+     * @see 'shapes' and 'effects' array
+     * 
+     * @see Shape.java
+     * @see Effect.java
+     * 
+     * @param fileName 
+     * @author Cole Burgi
+     */
     public void loadAnimationFromFile(String fileName){
         
         //the "test\\" part is just there because I am putting test file in the test directory -Cole
@@ -56,12 +68,14 @@ public class AnimationPlayer {
             shapes = new Shape[elements];
             //reads blank line -Cole
             input.readLine();
+            
              //runs through all the shapes -Cole
             for(Shape n: shapes){
                 //Sets the type of shape -Cole
                 String shapeType = input.readLine().strip();
                 if(shapeType.contains(shapeTypes[0]/*Which is Circle*/)){
                     n = new Circle();
+                    
                     System.out.println("c");
                     
                 }
@@ -164,11 +178,14 @@ public class AnimationPlayer {
                                 
                         
                     }
+                shapesList.add(n);    
                 
-                //sets the completed ArrayList of effects to an array to be properly uses -Cole
-                effects = effectsList.toArray(new Effect[0]);
                 
             }  
+            //sets the completed ArrayLists of effects and shapes to arrays to be properly uses -Cole
+            effects = effectsList.toArray(new Effect[0]);
+            shapes = shapesList.toArray(new Shape[0]);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }finally{
@@ -180,8 +197,22 @@ public class AnimationPlayer {
         }
     }
     
+    /**
+     * Creates a frame, that Arron Chin wrote
+     * @see MyFrame
+     * 
+     * @author Cole Burgi
+     */
     public void run(){
         
         MyFrame myFrame = new MyFrame(); 
+        
+        //Just tester for the shapes and effects
+        for(Shape n: shapes){
+            System.out.println(n.getClass());
+        }
+        for(Effect n: effects){
+            System.out.println(n.n.getX());
+        }
     }
 }

@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The effect that makes the shape visible
+ * @see Effect.java
+ * 
+ * @author Cole Burgi
  */
 public class Show extends Effect{
      public Show(Shape n, int f){
@@ -15,6 +17,6 @@ public class Show extends Effect{
      
      @Override
      public void run(){
-         n.setVisable(true);
+         n.setVisible(true);
      }
 }

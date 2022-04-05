@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The class for lines
+ * @see Shape.java
+ * 
+ * @author Cole Burgi
  */
 public class Line extends Shape{
     private int endX, endY;

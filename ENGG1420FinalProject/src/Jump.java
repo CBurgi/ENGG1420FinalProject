@@ -4,8 +4,10 @@
  */
 
 /**
- *
- * @author cburg
+ * The effect that changes the x and y values of the shape moving it
+ * @see Effect.java
+ * 
+ * @author Cole Burgi
  */
 public class Jump extends Effect{
     private int jumpX, jumpY;
