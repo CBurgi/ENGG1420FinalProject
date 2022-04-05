@@ -20,6 +20,7 @@ public class AnimationPlayer {
     private int fps = 0;
     private int elements = 0;
     
+    ArrayList<Shape> shapesList = new ArrayList<Shape>();
     Shape[] shapes = null;
     
     ArrayList<Effect> effectsList = new ArrayList<Effect>();
@@ -67,12 +68,14 @@ public class AnimationPlayer {
             shapes = new Shape[elements];
             //reads blank line -Cole
             input.readLine();
+            
              //runs through all the shapes -Cole
             for(Shape n: shapes){
                 //Sets the type of shape -Cole
                 String shapeType = input.readLine().strip();
                 if(shapeType.contains(shapeTypes[0]/*Which is Circle*/)){
                     n = new Circle();
+                    
                     System.out.println("c");
                     
                 }
@@ -175,11 +178,14 @@ public class AnimationPlayer {
                                 
                         
                     }
+                shapesList.add(n);    
                 
-                //sets the completed ArrayList of effects to an array to be properly uses -Cole
-                effects = effectsList.toArray(new Effect[0]);
                 
             }  
+            //sets the completed ArrayLists of effects and shapes to arrays to be properly uses -Cole
+            effects = effectsList.toArray(new Effect[0]);
+            shapes = shapesList.toArray(new Shape[0]);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }finally{
@@ -200,5 +206,13 @@ public class AnimationPlayer {
     public void run(){
         
         MyFrame myFrame = new MyFrame(); 
+        
+        //Just tester for the shapes and effects
+        for(Shape n: shapes){
+            System.out.println(n.getClass());
+        }
+        for(Effect n: effects){
+            System.out.println(n.n.getX());
+        }
     }
 }

@@ -16,7 +16,7 @@ public abstract class Shape {
     
     //variables that all shapes will have
     private boolean visible = false;
-    private int x, y, border;
+    private int x=0, y=0, border=1;
     private int[] color = {0, 0, 0};
     private int[] borderColor = {0, 0, 0};
     
@@ -29,6 +29,13 @@ public abstract class Shape {
     public void setY(int y){
         this.y = y;
     }
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
+    }
+    
     public void setBorder(int b){
         this.border = b;
     }
