@@ -1,3 +1,10 @@
+    /**
+     * Creates a Panel that extends to Jpanel
+     * 
+     * 
+     * @author Aaron Chin
+     */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;

@@ -1,5 +1,10 @@
 
-import java.awt.*;
+    /**
+     * Creates a frame  and Jframe
+     * 
+     * 
+     * @author Aaron Chin
+     */
 import javax.swing.*;
 
 //creating MyFrame class
